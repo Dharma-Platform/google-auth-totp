@@ -97,7 +97,7 @@ var totp = {
      */
     generateQrCode(secret, user) {
         const otpAuthUrl = `otpauth://totp/${this.siteId}:${user}?secret=${secret}&issuer=${this.siteId}&image=${this.siteIcon}`;
-        return `${this.googleChartApiBase}?chs=${this.qRCodeSize}&chld=M|0&chr=qr&chl=${encodeURIComponent(otpAuthUrl)}`;
+        return `${this.googleChartApiBase}?chs=${this.qRCodeSize}&chld=M|0&cht=qr&chl=${encodeURIComponent(otpAuthUrl)}`;
     }
 };
 
